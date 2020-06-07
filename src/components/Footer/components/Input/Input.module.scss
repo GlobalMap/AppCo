@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  position: relative;
+  top: 6em;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1px #F1F1F1;
+  width: fit-content;
+  background: #fff;
+  padding: 4px;
+  border-radius: 10px;
+
+  input {
+    width: 25em;
+    border: none;
+  }
+
+  button {
+    background: #3A80BA;
+    border-radius: 8px;
+    border: none;
+    width: 11em;
+    height: 3.5em;
+    color: #fff;
+    cursor: pointer;
+  }
+}

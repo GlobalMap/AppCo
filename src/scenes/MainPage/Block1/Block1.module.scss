@@ -1,0 +1,41 @@
+.block {
+  height: 100vh;
+}
+.mobile {
+  position: absolute;
+  bottom: 5%;
+  right: 16%;
+  //z-index: 2;
+}
+
+.text {
+  position: absolute;
+  top: 5em;
+  left: 4em;
+  color: #fff;
+  font-size: 20px;
+  line-height: 142%;
+
+  .title {
+    font-size: 48px;
+    line-height: 59px;
+    width: 55%;
+  }
+
+  .decription {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    width: 55%;
+    font-size: 20px;
+  }
+
+  .button {
+    width: 9.625em;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1em;
+    border: none;
+    color: #3A80BA;
+    cursor: pointer;
+  }
+}
