@@ -1,10 +1,11 @@
-import React from 'react';
-import MainPage from "./scenes/MainPage/MainPage";
+import React, {useEffect, useState} from 'react';
+import Routes from "./scenes/routes";
 
 function App() {
+
   return (
     <div className="App">
-        <MainPage />
+        <Routes />
     </div>
   );
 }
