@@ -60,8 +60,6 @@ export function reducer(state = initialState, actions) {
 }
 
 export const getUsers = (state) => state.users;
-export const getUsersPending = (state) => state.pending;
 export const getUserStatistic = (state) => state.statistic;
 export const getUser = (state) => state.user;
 export const getStatisticOneUser = (state) => state.oneStatistic;
-export const getUsersError = (state) => state.error;

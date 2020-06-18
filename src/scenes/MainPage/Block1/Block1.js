@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import s from './Block1.module.scss';
 import Header from "../../../components/Header/Header";
 import Svg from "../../../components/svg/SvgIcon";

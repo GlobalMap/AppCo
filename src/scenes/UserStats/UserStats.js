@@ -7,7 +7,6 @@ import fetchUsersAction from "../../actions/fetchUsers";
 import ReactPaginate from 'react-paginate';
 import Svg from "../../components/svg/SvgIcon";
 import Footer from "../../components/Footer/Footer";
-import fetchUsersStatisticAction from "../../actions/fetchUsersStatistic";
 import NavLinksAndTitle from "../../components/NavLinks/NavLinksAndTitle";
 
 function UserStats({ fetchUsers, total }) {
