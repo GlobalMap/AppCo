@@ -39,3 +39,71 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 960px) {
+  .mobile {
+    display: none;
+  }
+
+  .bgBlue {
+    display: none;
+  }
+
+  .text {
+    top: 5rem;
+    left: 0;
+
+    .title {
+      font-size: 36px;
+      line-height: 45px;
+      width: 100%;
+    }
+
+    .decription {
+      width: 100%
+    }
+
+    .button {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50px);
+    }
+  }
+
+  .block {
+    height: 70vh;
+    background: linear-gradient(92.09deg, rgb(37, 93, 139) 2.29%, rgb(58, 128, 186) 96.79%);
+  }
+}
+
+@media (max-width: 1920px) {
+  .mobile {
+    width: 260px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .mobile {
+    width: 500px;
+  }
+  .text {
+    font-size: 22px;
+    top: 18em;
+
+    .title {
+      width: 100%;
+      font-size: 3em
+    }
+
+    .decription {
+      width: 60%;
+      font-size: 1.6em;
+      line-height: 1.5em;
+    }
+
+    .button {
+      width: 14em;
+      font-size: 1.1em;
+    }
+  }
+}

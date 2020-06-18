@@ -1,13 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
+import {connect} from "react-redux";
 import Routes from "./scenes/routes";
+import fetchUsersStatisticAction from "./actions/fetchUsersStatistic";
 
-function App() {
+
+function App({ fetchStatistic }) {
+
+    useEffect(() => {
+        fetchStatistic();
+    },[])
 
   return (
-    <div className="App">
+    <div style={{display: "flex", flexDirection: "column"}}>
         <Routes />
     </div>
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchStatistic: () => dispatch(fetchUsersStatisticAction())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(App);

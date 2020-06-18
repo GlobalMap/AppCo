@@ -15,6 +15,7 @@ export const StyledTableCell = withStyles((theme) => ({
 
 export const StyledTableRow = withStyles((theme) => ({
     root: {
+        cursor: 'pointer',
         '&:nth-of-type(odd)': {
             backgroundColor: theme.palette.action.hover,
         },

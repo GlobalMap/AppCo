@@ -1,15 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import s from './Block1.module.scss';
-import { background, mobile } from "../../../components/svg/svg";
 import Header from "../../../components/Header/Header";
+import Svg from "../../../components/svg/SvgIcon";
+import Grid from "@material-ui/core/Grid";
 
 function Block1() {
+    const theme = useTheme();
+    const matchLGsize = window.screen.width > 1280 && window.screen.width < 1920
+    const matchXLsize = window.screen.width > 1920
+
+    const adaptiveMobile = () => {
+        if (matchLGsize) {
+            return 300;
+        }
+        if (matchXLsize) {
+            return 500;
+        }
+    }
+
     return (
-        <div className={s.block}>
+        <Grid className={s.block}>
             <Header />
             <div className={s.bgBlue}>
-                { background }
+                <Svg name="background" />
             </div>
             <div className={s.text}>
                 <p className={s.title}>
@@ -25,9 +41,9 @@ function Block1() {
                 </Link>
             </div>
             <div className={s.mobile}>
-                { mobile }
+                <Svg name="mobile" />
             </div>
-        </div>
+        </Grid>
     )
 }
 

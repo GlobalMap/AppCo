@@ -1,9 +1,9 @@
 import React from 'react';
-import './Logo.module.scss';
+import s from './Logo.module.scss';
 
 function Logo() {
     return (
-        <p>AppCo</p>
+        <p className={s.logo}>AppCo</p>
     )
 }
 

@@ -1,10 +1,38 @@
 .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
   top: 15em;
   align-items: center;
   color: #fff;
-  margin-right: 8em;
-  margin-left: 8em;
+}
+
+@media (max-width: 960px) {
+  .main {
+    top: 3.5em;
+  }
+
+  footer {
+    background: linear-gradient(92.09deg, rgb(37, 93, 139) 2.29%, rgb(58, 128, 186) 96.79%);
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1280px) {
+  .main {
+    top: 11.5em;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main {
+    top: 22em;
+
+    span {
+      font-size: 2em;
+    }
+  }
 }

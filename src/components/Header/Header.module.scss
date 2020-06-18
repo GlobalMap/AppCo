@@ -5,3 +5,9 @@ header {
   padding-left: 5em;
   padding-top: .5em;
 }
+
+@media (min-width: 1920px) {
+  header {
+    padding-bottom: 2em;
+  }
+}

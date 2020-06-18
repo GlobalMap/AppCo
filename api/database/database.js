@@ -28,11 +28,34 @@ let db = new sqlite3.Database(DBSOURSE, (err) => {
                          let insert = 'INSERT INTO users (first_name, last_name, email, gender, ip_address) VALUES(?,?,?,?,?)';
                          let dataParse = JSON.parse(data);
                          dataParse.map(data => {
-                             db.run(insert, [data.first_name, data.last_name, data.email, data.ip_address])
+                             db.run(insert, [data.first_name, data.last_name, data.email, data.gender,data.ip_address])
                          });
                      }
                  });
             }
+        })
+        db.run(`CREATE TABLE users_statistic (
+            user_id INTEGER,
+            date DATE,
+            page_views INTEGER,
+            clicks INTEGER
+        )`,
+        (err) => {
+          if(err) {
+              console.log(err)
+          } else {
+              fs.readFile('./database/users_statistic.json', (err, data) => {
+                  if(err) {
+                      console.log(err);
+                  } else {
+                      let insert = 'INSERT INTO users_statistic (user_id, date, page_views, clicks) VALUES(?,?,?,?)';
+                      let dataParse = JSON.parse(data);
+                      dataParse.map(data => {
+                          db.run(insert, [data.user_id, data.date, data.page_views, data.clicks])
+                      });
+                  }
+              });
+          }
         })
     }
 });
